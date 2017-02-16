@@ -1,4 +1,5 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
+var BoardContainer = require('./containers/boardContainer');
 
-ReactDOM.render(<App />, document.getElementById('app'));
+ReactDOM.render(<BoardContainer />, document.getElementById('app'));
