@@ -5,24 +5,36 @@ var TicTacToe = require('../model/tic-tac-toe');
 var Player = require('../model/player');
 var Computer = require('../model/computer');
 
-require('../styles/main.css');
-
 var BoardContainer = React.createClass({
-  handleComputerTurn: function() {
-    var computer = this.props.computer;
-    var board = this.state.board;
-    var move = computer.getMove(board);
-    if (board.makeMove(move[0], move[1], computer.isPlayer1)) {
-      if (board.isOver()) {
-        computer.wins = board.isDraw() ? computer.wins : computer.wins + 1;
-        this.props.onGameOver(this.props.player, computer);
+  checkGameState: function() {
+    if (this.state.board.isOver()) {
+      if (!this.state.board.isDraw()) {
+        document.getElementById(this.state.board.getWinningState()).style.display = 'inline';
       }
-
-      this.setState({
-        isPlayerMove: true,
-        board: board
-      });
+      setTimeout(function() {
+        this.props.onGameOver(this.props.player, this.props.computer);
+      }.bind(this), 1500);
+    } else if (!this.state.isPlayerMove) {
+      this.handleComputerTurn();
     }
+  },
+
+  handleComputerTurn: function() {
+    setTimeout(function() {
+      var computer = this.props.computer;
+      var board = this.state.board;
+      var move = computer.getMove(board);
+      if (board.makeMove(move[0], move[1], computer.isPlayer1)) {
+        if (board.isOver()) {
+          computer.wins = board.isDraw() ? computer.wins : computer.wins + 1;
+        }
+
+        this.setState({
+          isPlayerMove: true,
+          board: board
+        }, this.checkGameState);
+      }
+    }.bind(this), 200);
   },
 
   handleCellClick: function(e) {
@@ -34,13 +46,12 @@ var BoardContainer = React.createClass({
     if (this.state.isPlayerMove && board.makeMove(x, y, player.isPlayer1)) {
       if (board.isOver()) {
         player.wins = board.isDraw() ? player.wins : player.wins + 1;
-        this.props.onGameOver(player, this.props.computer);
       }
 
       this.setState({
         isPlayerMove: false,
         board: board
-      }, this.handleComputerTurn);
+      }, this.checkGameState);
     }
   },
 

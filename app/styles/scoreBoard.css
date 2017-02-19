@@ -1,0 +1,32 @@
+.scoreBoard {
+  width: 800px;
+  margin: 50px auto;
+  overflow: none;
+}
+
+.scoreElement {
+  min-width: 325px;
+  max-width: 350px;
+  height: 200px;
+  font-size: 40px;
+  background-color: cyan;
+}
+
+.first {
+  width: 40%;
+  float: left;
+}
+
+.second {
+  margin-left: 60%;
+  overflow: hidden;
+}
+
+.scoreElement h1 {
+  font-size: 28px;
+  font-weight: 500;
+  margin-top: 0px;
+  margin-bottom: 50px;
+  background-color: grey;
+  padding: 10px;
+}

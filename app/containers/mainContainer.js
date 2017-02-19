@@ -6,9 +6,11 @@ var BoardContainer = require('./BoardContainer');
 var Player = require('../model/player');
 var Computer = require('../model/computer');
 
+require('../styles/main.css');
+
 var MainContainer = React.createClass({
-  handlePlayerSelection: function(e) {
-    var selection = e.target.value;
+  handlePlayerSelection: function(element) {
+    var selection = element.getAttribute('data-value');
     var player = this.state.player;
     var computer = this.state.computer;
 
@@ -42,14 +44,14 @@ var MainContainer = React.createClass({
     var scoreBoard = <ScoreBoard player={this.state.player} computer={this.state.computer} />;
     if (this.state.gameOver) {
       return (
-        <div>
+        <div className="main">
           {scoreBoard}
           <Picker onPickerChange={this.handlePlayerSelection} />
         </div>
       );
     } else {
       return (
-        <div>
+        <div className="main">
           {scoreBoard}
           <BoardContainer
             onGameOver={this.handleGameOver}
