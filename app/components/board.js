@@ -24,14 +24,14 @@ function Board(props) {
       </div>
       <div className="board">
         <svg className="svg" xmlns="http://www.w3.org/2000/svg">
-          <path id="diagonalWin" className="path" fill="#FFFFFF" stroke="#000000" strokeWidth="8" strokeMiterlimit="10" d="M0,0 l450,450"/>
-          <path id="secondaryDiagonalWin" className="path" fill="#FFFFFF" stroke="#000000" strokeWidth="8" strokeMiterlimit="10" d="M430,0 l-430,430"/>
-          <path id="leftVerticalWin" className="path" fill="#FFFFFF" stroke="#000000" strokeWidth="8" strokeMiterlimit="10" d="M55,0 l0,450"/>
-          <path id="centerVerticalWin" className="path" fill="#FFFFFF" stroke="#000000" strokeWidth="8" strokeMiterlimit="10" d="M215,0 l0,450"/>
-          <path id="rightVerticalWin" className="path" fill="#FFFFFF" stroke="#000000" strokeWidth="8" strokeMiterlimit="10" d="M376,0 l0,450"/>
-          <path id="topHorizontalWin" className="path" fill="#FFFFFF" stroke="#000000" strokeWidth="8" strokeMiterlimit="10" d="M0,55 l450,0"/>
-          <path id="centerHorizontalWin" className="path" fill="#FFFFFF" stroke="#000000" strokeWidth="8" strokeMiterlimit="10" d="M0,215 l450,0"/>
-          <path id="bottomHorizontalWin" className="path" fill="#FFFFFF" stroke="#000000" strokeWidth="8" strokeMiterlimit="10" d="M0,375 l450,0"/>
+          <path id="diagonalWin" className="path" fill="#FFFFFF" stroke="#F3F4F6" strokeWidth="8" strokeMiterlimit="10" d="M0,0 l450,450"/>
+          <path id="secondaryDiagonalWin" className="path" fill="#FFFFFF" stroke="#F3F4F6" strokeWidth="8" strokeMiterlimit="10" d="M430,0 l-430,430"/>
+          <path id="leftVerticalWin" className="path" fill="#FFFFFF" stroke="#F3F4F6" strokeWidth="8" strokeMiterlimit="10" d="M55,0 l0,450"/>
+          <path id="centerVerticalWin" className="path" fill="#FFFFFF" stroke="#F3F4F6" strokeWidth="8" strokeMiterlimit="10" d="M215,0 l0,450"/>
+          <path id="rightVerticalWin" className="path" fill="#FFFFFF" stroke="#F3F4F6" strokeWidth="8" strokeMiterlimit="10" d="M376,0 l0,450"/>
+          <path id="topHorizontalWin" className="path" fill="#FFFFFF" stroke="#F3F4F6" strokeWidth="8" strokeMiterlimit="10" d="M0,55 l450,0"/>
+          <path id="centerHorizontalWin" className="path" fill="#FFFFFF" stroke="#F3F4F6" strokeWidth="8" strokeMiterlimit="10" d="M0,215 l450,0"/>
+          <path id="bottomHorizontalWin" className="path" fill="#FFFFFF" stroke="#F3F4F6" strokeWidth="8" strokeMiterlimit="10" d="M0,375 l450,0"/>
         </svg>
       </div>
     </div>

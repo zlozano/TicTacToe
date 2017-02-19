@@ -9,7 +9,7 @@
   max-width: 350px;
   height: 200px;
   font-size: 40px;
-  background-color: cyan;
+  background-color: #5EFFE0;
 }
 
 .first {
@@ -27,6 +27,6 @@
   font-weight: 500;
   margin-top: 0px;
   margin-bottom: 50px;
-  background-color: grey;
+  background-color: #B8C5CC;
   padding: 10px;
 }

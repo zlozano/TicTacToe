@@ -5,11 +5,12 @@
   margin-bottom: 100px;
   border-radius: 20px;
   top: 100px;
+  color: #F3F4F6;
 
 }
 
 .board table td {
-  border: 8px solid black;
+  border: 8px solid #F3F4F6;
   border-radius: 20px;
   width: 150px;
   height: 150px;

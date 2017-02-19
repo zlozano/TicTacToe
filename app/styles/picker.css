@@ -13,7 +13,7 @@ ul.picker {
     margin-left: auto;
     margin-right: auto;
     padding: 0;
-    background-color: cyan;
+    background-color: #F3F4F6;
 }
 
 ul.picker li {
@@ -29,12 +29,13 @@ ul.picker li:not(.init) {
   /*width: 100%;*/
   padding-top: 20px;
   display: none;
-  background: #ddd;
+  background: #B8C5CC;
 
 }
 
 ul.picker li:not(.init):hover, ul li.selected:not(.init) {
-  background: #09f;
+  background: #CC3741;
+  color: white;
   cursor: default;
 }
 
