@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "./node_modules/webpack/bin/webpack.js --watch --progress --colors"
+    "test": "./node_modules/webpack/bin/webpack.js --watch --progress --colors",
+    "start": "./node_modules/webpack/bin/webpack.js -p && open dist/index.html"
   },
   "author": "",
   "license": "ISC",
